@@ -1,0 +1,399 @@
+*{
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+          }
+body{ 
+    
+    justify-content: center;
+    align-items: center;
+  
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, blue, alpha);
+    color: transparent;  
+    backdrop-filter: blur(15px);
+   
+    height: 8vh;
+    width: 100vw;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.cabeçalho{
+    display: flex;
+}
+
+.cabeçalho li{
+    list-style: none;
+    margin-right: 40px;
+
+    
+   
+
+    letter-spacing: 3.6px;
+    font-size: 16px;
+    transition: 0.3 ease-in-out;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 400;
+
+}
+
+
+.header nav ul{
+    display: flex;
+    gap: 30px;
+}
+
+.header ul li{
+    position: relative;
+    list-style: none;
+
+    /*margin-right: 40px;*/
+    
+}
+.header ul li a {
+
+    position: relative;
+    font-size: 3em;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+    line-height: 3cm;  
+    letter-spacing: 3.6px;
+
+    font-size: 16px;
+    transition: 0.3 ease-in-out;
+    color: transparent;   
+    -webkit-text-stroke: 1px rgba(255,255,255,0.5);
+}
+.roxo{--clr:#dc00d4}
+    
+/* ANIMAÇÃO*/
+ul li a ::before{
+ content: attr(data-text);
+               position: absolute;
+               color: var(--clr);
+               width: 0;
+               overflow: hidden;
+               transition: 1s;
+               border-right: 8px solid var(--clr);
+               -webkit-text-stroke: 1px var(--clr);
+}
+ul li a:hover ::before{
+width: 100%;
+filter: drop-shadow(0 0 25pc var(--clr));
+}
+
+
+/* SECTION DO HOME */
+.home {
+    background: #01006b;
+    background: -webkit-gradient(linear, left top, left bottom, from(#01006b), color-stop(0%, #000211), color-stop(17%, #030026), to(#06002e));
+    background: linear-gradient(180deg, #01006b 0%, #000211 0%, #030026 17%, #06002e 100%);
+    height: 90vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .apresentacao {
+    font-size: 30px;
+  }
+  .apresentacao h2{
+    font-size: 50px;
+  }
+
+
+  /*PAGINA SOBRE */
+  .about {
+    background: #01006b;
+    background: -webkit-gradient(linear, left top, left bottom, from(#01006b), color-stop(0%, #020a4a), color-stop(97%, #050041), to(#06002b));
+    background: linear-gradient(180deg, #01006b 0%, #020a4a 0%, #050041 97%, #06002b 100%);
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .home .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .homeName{ 
+    justify-content: center;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50vh;
+  }
+  .imagem img{
+    width: 90%;
+    max-width: 100%;
+  }
+  .container{
+    width: 90%;
+    padding: 120px;
+    display: flex;
+  }
+  .text-about{
+    margin-left: 50px;
+  }
+  
+  .redes{
+    display: flex;
+    justify-content: center;
+}
+
+/* PARTE DE PROJETOS */
+.projetos {
+    background: -webkit-gradient(linear, left top, left bottom, from(#01006b), color-stop(0%, #000211), color-stop(17%, #030026), to(#06002e));
+    background: linear-gradient(180deg, #01006b 0%, #000211 0%, #030026 17%, #06002e 100%);
+    padding: 100px ;
+    text-align: center;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .slides{
+    margin: 0 auto;
+    width: 800px;
+    height: 600px;
+    overflow: hidden; /* DEIXAR SO UMA IMAGAEM */
+    
+  }
+.quadros{
+  width: 400%;
+  height: 400px;  
+  display: flex;
+}
+.quadros input{
+    display: none;
+}
+.slide{
+    width: 25%;
+    position: relative;    
+    transition: 3s;
+}
+.slide img{
+    width: 800px;
+    height: 380px;
+}
+.manual-navigation{
+    position: absolute;
+    width: 800px;
+    margin-top: 1px;
+    display: flex;
+    justify-content: center;
+}
+
+.slides a{
+    position:relative;
+    width: 100px;
+    margin-top: 30px;
+    
+    
+    
+}
+
+.manual-btn{
+    border: 2px solid hsl(0, 0%, 100%);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.manual-btn:not(:last-child){
+    margin-right: 30px;
+}
+.manual-btn:hover{
+    background-color: #fff;
+}
+
+#radio1:checked ~ .primeiro{
+    margin-left: 0;
+}
+#radio2:checked ~ .primeiro{
+    margin-left: -25%;
+}
+#radio3:checked ~ .primeiro{
+    margin-left: -50%;
+    margin-top: -50%;
+}
+
+
+
+
+.navigation div{
+border: 2px solid #000211;
+padding: 5px;
+border-radius: 10px;
+cursor: pointer;
+transition: 1s;
+}
+
+/*HABILIDADES*/
+.habilidades {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 80vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#01006b), color-stop(0%, #020a4a), color-stop(97%, #050041), to(#06002b));
+  background: linear-gradient(180deg, #01006b 0%, #020a4a 0%, #050041 97%, #06002b 100%);
+}
+
+.habilidades h5 {
+    display: block;
+  }
+  
+  .habilidades .container-habilidades {
+    margin: auto 0;
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  
+  .habilidades .container-habilidades .eventos {
+    width: 50%;
+  }
+  
+  .habilidades .container-habilidades .eventos h5 {
+    color: white;
+    font-size: 2em;
+  }
+
+  /*
+  .habilidades .container-habilidades .eventos .evento {
+    height: 250px;
+    color: white;
+    padding: 10px;
+  }
+  */
+  
+  .habilidades .container-habilidades .habi {
+    width: 50%;
+    height: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  
+  .habilidades .container-habilidades .habi .box {
+    margin: 10px;
+    background-color: #101041;
+    width: 20%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /*PARA FAZER*/
+  .habilidades .container-habilidades .habi .box:hover {
+    -webkit-box-shadow: 2px 2px 10px rgb(255, 255, 255);
+            box-shadow: 2px 2px 10px rgb(255, 255, 255);
+  }
+  
+  .habilidades .container-habilidades .habi .box img {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .habilidades .container-habilidades .habi .box h2 {
+    font-size: 1em;
+    color: white;
+    padding: 5px;
+  }
+
+  /*RODAPÉ*/
+ .rodape{
+    background-color:black;
+    text-align: center;    
+ }
+.rodape h7{
+    color: #fff;
+    font-size: 25px;
+}
+.brilho{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    color: #fff;
+    font-size: 20px;
+}
+.brilho li{
+    list-style: none;
+    position: relative;
+    display: inline-block;
+}
+.brilho li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    border: 4px;
+    scale: .1;
+    transform-origin: left;
+    transition: scale .25s;
+}
+.brilho li:hover::before{
+    scale: 1;
+}
+
+
+
+  
