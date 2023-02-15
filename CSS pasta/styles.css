@@ -170,7 +170,13 @@ filter: drop-shadow(0 0 25pc var(--clr));
   
   .redes{
     display: flex;
+    padding: 20px 10px;
+    grid-gap: 5px 8px;
     justify-content: center;
+}
+.redes a{
+  display: flex;
+
 }
 
 /* PARTE DE PROJETOS */
